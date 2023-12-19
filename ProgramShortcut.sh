@@ -66,14 +66,14 @@ while true;
                 echo "──────────"
                 echo "Nilai Arti"
                 echo "──────────"
-                echo "0 ---"
-                echo "1 --x"
-                echo "2 -w-"
-                echo "3 -wx"
-                echo "4 r--"
-                echo "5 r-x"
-                echo "6 rw-"
-                echo "7 rwx"
+                echo "|0  - - -|"
+                echo "|1  - - x|"
+                echo "|2  - w -|"
+                echo "|3  - w x|"
+                echo "|4  r - -|"
+                echo "|5  r - x|"
+                echo "|6  r w -|"
+                echo "|7  r w x|"
                 echo "──────────"
                 read -p "Masukkan hak akses baru (contoh: 755): " new_permissions
                 chmod "$new_permissions" "$file_to_modify"
@@ -116,7 +116,16 @@ while true;
             # Perintah menampilkan informasi sistem
             11)
                 echo "Tampilkan Informasi Sistem:"
-                uname -a
+                # uname -a
+                echo "────────────────────"
+                echo "| Informasi Sistem |"
+                echo "────────────────────"
+                echo "Hostname: $(hostname)"
+                echo "Sistem Operasi: $(lsb_release -d | cut -f2)"
+                echo "Versi Kernel: $(uname -r)"
+                echo "Pengguna saat ini: $USER"
+                echo "Direktori saat ini: $(pwd)"
+                echo "────────────────────"
                 ;;
 
             # Perintah mengupdate package OS
