@@ -63,6 +63,18 @@ while true;
             # Perintah memanipulasi hak akses berkas
             5)
                 read -p "Masukkan nama berkas untuk manipulasi hak akses: " file_to_modify
+                echo "──────────"
+                echo "Nilai Arti"
+                echo "──────────"
+                echo "0 ---"
+                echo "1 --x"
+                echo "2 -w-"
+                echo "3 -wx"
+                echo "4 r--"
+                echo "5 r-x"
+                echo "6 rw-"
+                echo "7 rwx"
+                echo "──────────"
                 read -p "Masukkan hak akses baru (contoh: 755): " new_permissions
                 chmod "$new_permissions" "$file_to_modify"
                 echo "Hak akses untuk \"$file_to_modify\" berhasil diubah menjadi $new_permissions."
