@@ -125,7 +125,6 @@ while true;
                 echo "Versi Kernel: $(uname -r)"
                 echo "Pengguna saat ini: $USER"
                 echo "Direktori saat ini: $(pwd)"
-                echo "────────────────────"
                 ;;
 
             # Perintah mengupdate package OS
